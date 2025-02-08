@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار سرعة الإنترنت</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tachometer-alt"></i> اختبار سرعة الإنترنت</h1>
+        </header>
+
+        <main>
+            <div class="speed-test-card">
+                <div class="speed-display">
+                    <div class="speed-circle">
+                        <div class="speed-number">
+                            <span id="current-speed">0</span>
+                            <span class="unit">Mbps</span>
+                        </div>
+                        <div id="test-status">جاهز للاختبار</div>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-item">
+                        <i class="fas fa-download"></i>
+                        <div class="result-label">التحميل</div>
+                        <div class="result-value" id="download-speed">-- Mbps</div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-upload"></i>
+                        <div class="result-label">الرفع</div>
+                        <div class="result-value" id="upload-speed">-- Mbps</div>
+                    </div>
+                    <div class="result-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="result-label">زمن الاستجابة</div>
+                        <div class="result-value" id="ping">-- ms</div>
+                    </div>
+                </div>
+
+                <button id="start-test" class="start-button">
+                    <span class="button-text">بدء الاختبار</span>
+                    <i class="fas fa-play"></i>
+                </button>
+
+                <div id="progress-bar" class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
